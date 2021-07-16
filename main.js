@@ -29,9 +29,10 @@ class Field {
     }
   }
   play() {
+
     const pos = [];
     this.firstPosition(pos);
-
+    this.print();
     while (!this._result) {
       const move = prompt("which way do u want to move?");
       /*index [0](row) in pos array will change by +1 when we
@@ -167,5 +168,5 @@ const myField = new Field([
 
 let game = Field.generateField(5, 3, 1);
 myField._arr=game;
-myField.print();
+
 myField.play();
